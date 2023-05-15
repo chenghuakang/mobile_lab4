@@ -2,7 +2,6 @@ package com.example.lab4.ui.theme
 
 
 import android.app.DatePickerDialog
-import android.graphics.drawable.Icon
 import android.inputmethodservice.Keyboard
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -52,53 +51,31 @@ fun MainScreen() {
             TopAppBar(
                 title = {
                     Row(
-                        horizontalArrangement = Arrangement.Center,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
                             textAlign = TextAlign.Center,
                             text = "Search",
                             modifier = Modifier.fillMaxWidth(),
-
-                            )
+                        )
                     }
                 },
                 backgroundColor = Color.White,
                 contentColor = Color.Black,
-
-
-                )
-        },
-        content = {  innerPadding ->
-            Row(
-                modifier = Modifier.padding(horizontal = 6.dp, vertical = 10.dp)
-
             )
-            {
+        },
+        content = { innerPadding ->
+            Column(
+                modifier = Modifier
+                    .padding(horizontal = 6.dp, vertical = 10.dp)
+                    .padding(innerPadding)
+            ) {
                 SportSearch()
                 DateButton()
             }
-
-
         }
-
     )
 }
-
-/*
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun ShowCalendar(fragmentManager: FragmentManager){
-    val dp =
-        MaterialDatePicker
-        .Builder
-        .datePicker()
-        .setTitleText("Select date")
-        .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-        .build()
-
-   // dp.show(context,"Date_pick")
-}*/
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
