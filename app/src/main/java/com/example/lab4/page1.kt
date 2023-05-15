@@ -2,7 +2,6 @@ package com.example.lab4.ui.theme
 
 
 import android.app.DatePickerDialog
-import android.graphics.Color
 import android.graphics.drawable.Icon
 import android.inputmethodservice.Keyboard
 import android.os.Bundle
@@ -16,6 +15,7 @@ import androidx.compose.material.icons.outlined.DateRange
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -51,7 +51,7 @@ fun MainScreen() {
         topBar = {
             TopAppBar(
                 title = {
-                    Keyboard.Row(
+                    Row(
                         horizontalArrangement = Arrangement.Center,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
@@ -70,7 +70,7 @@ fun MainScreen() {
                 )
         },
         content = {  innerPadding ->
-            Keyboard.Row(
+            Row(
                 modifier = Modifier.padding(horizontal = 6.dp, vertical = 10.dp)
 
             )

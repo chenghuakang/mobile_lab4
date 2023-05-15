@@ -1,6 +1,6 @@
 package com.example.lab4.ui.theme
 
-import android.graphics.Color
+import androidx.compose.ui.graphics.Color
 
 val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)
